@@ -1,0 +1,1 @@
+        decline_button.connect("clicked", self.decline_clicked(match_id))

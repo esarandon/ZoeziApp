@@ -6,12 +6,6 @@ gi.require_version("Gtk", "4.0")
 from gi.repository import Gtk, GLib
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from google.oauth2.credentials import Credentials
-from google.auth.transport.requests import Request
-from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
-
-SCOPES = ["https://www.googleapis.com/auth/calendar.events"]
 
 
 class TeamDetailWindow(Gtk.Window):
@@ -25,6 +19,7 @@ class TeamDetailWindow(Gtk.Window):
         self.process_coming_matches()
 
     def init_ui(self):
+        # TODO: space between columns should be reduce in order to make window fit and look look
         # Create a vertical box to contain the widgets
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
         vbox.set_margin_start(10)
